@@ -1,0 +1,36 @@
+{
+  "name": "magnetism-cli",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "",
+  "bin": {
+    "magnetism-cli": "./mag-cli.js"
+  },
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "keywords": [
+    "cli",
+    "magnetism"
+  ],
+  "files": [
+    "lib",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "rimraf ./lib && tsc"
+  },
+  "author": "mitjavaz",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "fs-extra": "^11.1.1",
+    "inquirer": "^9.2.10",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/inquirer": "^9.0.3",
+    "@types/node": "^20.5.1"
+  }
+}
