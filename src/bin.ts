@@ -1,8 +1,8 @@
 import { Command } from 'commander';
-
+import { CLI_VERSION } from './common/constant.js';
 const program = new Command();
 
-program.version(`magnetism-cli v${require('../package.json').version}`).usage('<command> [options]');
+program.version(`magnetism-cli Version ${CLI_VERSION}`).usage('<command> [options]');
 
 program
   .command('create')
@@ -11,7 +11,9 @@ program
   .option('-f, --formate','Choose programming format')
   .option('-l, --locale','Generate files in i18n format')
   .action(async (option)=>{
-    const { create} = await import('./commands/create');
+    const { create} = await import('./commands/create.js');
 
     return create(option);
   })
+
+program.parse();

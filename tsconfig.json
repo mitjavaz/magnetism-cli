@@ -1,5 +1,5 @@
 {
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/magnetism-cli.ts"],
   "compilerOptions": {
     "outDir": "./lib",
     "target": "ES2017",

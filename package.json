@@ -4,7 +4,8 @@
   "type": "module",
   "description": "",
   "bin": {
-    "magnetism-cli": "./mag-cli.js"
+    "mag-cli": "./lib/bin.js",
+    "magnetism-cli": "./lib/bin.js"
   },
   "main": "./lib/index.js",
   "module": "./lib/index.js",
@@ -17,6 +18,8 @@
     "tsconfig.json"
   ],
   "scripts": {
+    "start": "pnpm i && rimraf ./lib && tsc && pnpm link --global",
+    "clearLink":"pnpm remove magnetism-cli -g && pnpm run start",
     "dev": "tsc --watch",
     "build": "rimraf ./lib && tsc"
   },
@@ -31,6 +34,7 @@
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
     "@types/inquirer": "^9.0.3",
-    "@types/node": "^20.5.1"
+    "@types/node": "^20.5.1",
+    "rimraf": "^5.0.1"
   }
 }
