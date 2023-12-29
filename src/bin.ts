@@ -2,7 +2,7 @@ import { Command } from 'commander';
 import { CLI_VERSION } from './common/constant.js';
 const program = new Command();
 
-program.version(`magnetism-cli Version ${CLI_VERSION}`).usage('<command> [options]');
+program.version(`magnetism-cli ${CLI_VERSION}`).usage('<command> [options]');
 
 program
   .command('create')
